@@ -1,4 +1,5 @@
 import logging
+import os
 import sqlite3
 
 logger = logging.getLogger("discord")
@@ -56,6 +57,7 @@ class DatabaseManager:
         )
         """
 
+        os.makedirs("data", exist_ok=True)
         self._execute(channels_table)
         self._execute(perms_table)
         self._execute(logs_table)
