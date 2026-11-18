@@ -105,6 +105,10 @@ Now we must activate the virtual environment and install the required packages.
 ```bash
 # Activate the virtual environment
 source .venv/bin/activate
+
+# Optionally update pip
+pip install --upgrade pip
+
 # Install the packages
 pip install -r requirements.txt
 ```
@@ -152,3 +156,23 @@ Now just run a status check to see if everything works, and you're done!
 sudo systemctl status honeypot
 ```
 *Final note: if you're using a distro that doesn't use Systemd, like Alpine, it isn't too hard to adapt the service. Just make sure it doesn't run as root (it doesn't need any root privileges) and runs from the correct directory with the venv's python binary.*
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Disclaimer
+
+This bot is provided as-is, without warranty of any kind. The authors and
+contributors are not responsible for any moderation actions taken by or
+misconfiguration of this bot. You are responsible for complying with the
+[Discord Terms of Service](https://discord.com/terms) and
+[Developer Terms](https://discord.com/developers/docs/policies-and-agreements)
+when using it.
+
+## Credits
+
+Created by [@matisse-priem](https://github.com/matisse-priem).
+Contributions are welcome — feel free to open issues and pull requests!
